@@ -1,0 +1,34 @@
+const users = [
+  {
+    id: 1,
+    nombre: "Nicolas",
+  },
+  {
+    id: 2,
+    nombre: "Franco",
+  },
+  {
+    id: 3,
+    nombre: "Mario",
+  },
+  {
+    id: 4,
+    nombre: "Jorge",
+  },
+];
+
+function getUserById(id,callback) {
+  const user = users.find(function (user) {
+    return user.id === id;
+  });
+
+  if (!user) {
+    return callback(`Usuario no encontrado ${id}`);
+  }
+
+  return callback(null,user)
+}
+
+module.exports = {
+  getUserById,
+};
