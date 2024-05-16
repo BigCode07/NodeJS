@@ -1,11 +1,14 @@
-const getAgePlugin = require("get-age");
+// const getAgePlugin = require('get-age');
 
-const getAge = (birthDate) => {
-  if (!birthDate) return new Error("birthdate is required");
 
-  return new Date().getFullYear() - new Date(birthDate).getFullYear();
-};
+const getAge = (birthdate) => {
+  if ( !birthdate ) return new Error('birthdate is required');
+
+  // return getAgePlugin(birthdate);
+  return new Date().getFullYear() - new Date(birthdate).getFullYear();
+}
+
 
 module.exports = {
   getAge,
-};
+}

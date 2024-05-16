@@ -1,10 +1,18 @@
-console.log(process.env);
 
-const {USERNAME,COLOR} = process.env;
 
-console.log(USERNAME);
-console.log(COLOR);
 
-const characters =["Flash","Superman","Green Light","Batman"];
-const [,,,batman] =  characters;
-console.log(batman);
+// console.log( process.env );
+
+
+const { SHELL, HOMEBREW_PREFIX, npm_lifecycle_script } = process.env;
+
+
+// console.table({ SHELL, HOMEBREW_PREFIX, npm_lifecycle_script });
+
+
+const characters = ['Flash','Superman', 'Green Lantern', 'Batman'];
+
+const [ , , ,batman ] = characters;
+
+
+// console.log(batman);
