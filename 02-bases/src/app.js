@@ -13,13 +13,23 @@
 //   console.log({ user });
 // });
 
-const { getAge, getUUID } = require("./plugins");
+// const { getAge, getUUID } = require("./plugins");
 
-const { buildMakePerson } = require("./js-foundation/05-factory");
+// const { buildMakePerson } = require("./js-foundation/05-factory");
 
-const makePerson = buildMakePerson({ getUUID, getAge });
+// const makePerson = buildMakePerson({ getUUID, getAge });
 
-const obj = { name: "John", birthDate: "1998-03-12" };
+// const obj = { name: "John", birthDate: "1998-03-12" };
 
-const john = makePerson(obj);
-console.log(john);
+// const john = makePerson(obj);
+// console.log(john);
+
+const { getPokemonById } = require("./js-foundation/06-promises");
+
+getPokemonById(1)
+  .then((pokemon) => console.log({ pokemon }))
+  .catch((err) => console.log(err))
+  .finally(() => console.log("Finalmente"));
+
+//token de acceso
+//Publicas
