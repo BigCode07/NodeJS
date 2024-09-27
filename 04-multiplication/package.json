@@ -7,7 +7,7 @@
     "build": "rimraf ./dist && tsc",
     "start": "npm run build && node dist/app.js",
     "dev:nodemon": "nodemon",
-    "dev": "npm run build && node dist/app.js -b 10"
+    "dev": "npm run build && node dist/app.logic.js"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +22,7 @@
     "typescript": "^5.6.2"
   },
   "dependencies": {
+    "npx": "^10.2.2",
     "yargs": "^17.7.2"
   }
 }
