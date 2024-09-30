@@ -10,53 +10,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const args_plugin_1 = require("./config/plugins/args.plugin");
-// console.log(process.argv);
-// console.log(yarg);
-// (async () => {
-//   console.log("Ejecutado");
-// })();
-// const datos = [
-//   {
-//     id: 1,
-//     title: "Iron Man",
-//     year: 2008,
-//   },
-//   {
-//     id: 2,
-//     title: "Spiderman",
-//     year: 2017,
-//   },
-//   {
-//     id: 3,
-//     title: "Avengers",
-//     year: 2019,
-//   },
-// ];
-// const getDatos = () => {
-//   return new Promise((resolve, rejects) => {
-//     if(datos.length===0){
-//         rejects(new Error('No existen datos'));
-//     }
-//     setTimeout(() => {
-//       resolve(datos);
-//     }, 1500);
-//   });
-// };
-// // getDatos().then((datos) => console.log(datos));
-// async function fetchingData() {
-//   try {
-//     const datosFetched = await getDatos();
-//     console.log(datosFetched);
-//   } catch (err) {
-//     console.log(err.message);
-//   }
-// }
-// fetchingData();
+const server_app_1 = require("./presentation/server.app");
 (() => __awaiter(void 0, void 0, void 0, function* () {
     yield main();
 }))();
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
-        console.log(args_plugin_1.yarg);
+        const { b: base, l: limit, s: showTable, n: fileName, d: fileDestination } = args_plugin_1.yarg;
+        server_app_1.ServerApp.run({ base, limit, showTable, fileName, fileDestination });
     });
 }

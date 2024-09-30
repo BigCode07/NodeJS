@@ -6,21 +6,22 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const fs_1 = __importDefault(require("fs"));
 const args_plugin_1 = require("./config/plugins/args.plugin");
 const { b: base, l: limit, s: showTable } = args_plugin_1.yarg;
-const outputPath = `outputs`;
-let outputMessage = "";
-console.log(base);
+let outputMessage = '';
 const headerMessage = `
-================================
-          Tabla del ${base}
-================================          
+==================================
+       Tabla del ${base}
+==================================\n
 `;
-for (let i = 0; i <= limit; i++) {
+for (let i = 1; i <= limit; i++) {
     outputMessage += `${base} x ${i} = ${base * i}\n`;
 }
 outputMessage = headerMessage + outputMessage;
 if (showTable) {
     console.log(outputMessage);
 }
+const outputPath = `outputs`;
 fs_1.default.mkdirSync(outputPath, { recursive: true });
 fs_1.default.writeFileSync(`${outputPath}/tabla-${base}.txt`, outputMessage);
-console.log("File Created!");
+console.log('File created!');
+// grabar en el archivo de salida
+// path: outputs/tabla-5.txt
