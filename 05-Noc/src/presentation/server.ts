@@ -5,11 +5,11 @@ export class Server {
   static Start() {
     console.log("Server Started...");
     CronService.createJob("*/5 * * * * *", () => {
-      const url = "https://google.com";
+      const url = "https://interfile.com.ar";
       new CheckService(
         () => console.log(`${url} is ok`),
         (error) => console.log(error)
-      ).execute("https://google.com");
+      ).execute(url);
     });
   }
 }
