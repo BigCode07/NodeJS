@@ -379,3 +379,5 @@
 {"message":"https://localhost:3000 is not ok. function () { [native code] }","level":"high","createdAt":"2024-10-10T19:51:25.011Z"}
 {"message":"https://localhost:3000 is not ok. function () { [native code] }","level":"high","createdAt":"2024-10-10T19:51:30.017Z"}
 {"message":"https://localhost:3000 is not ok. function () { [native code] }","level":"high","createdAt":"2024-10-10T19:51:35.009Z"}
+{"message":"https://localhost:3000 is not ok. function () { [native code] }","level":"high","createdAt":"2024-10-10T19:51:40.007Z"}
+{"message":"https://localhost:3000 is not ok. function () { [native code] }","level":"high","createdAt":"2024-10-10T19:51:45.009Z"}
